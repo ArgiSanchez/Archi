@@ -2,10 +2,10 @@
 test script for install arch from scratch
 scripg based on arch linux from scrach
 
-# start iso, install git, 
-# pacman -Sy git
+start iso, install git, 
+``pacman -Sy git``
 
-# clone the script
-# git clone xxxxx
+clone the script
+git clone xxxxx
 
-# customize for you, and execute it
+customize for you, and execute it
