@@ -15,6 +15,6 @@ git clone https://github.com/ArgiSanchez/arch_test.git
 
 
 ## Cotinue with a desktop Hyprland
-After that you can continue with the magnific script from
+After that you can continue with the magnific script from Ja.KooLit
 
 https://github.com/JaKooLit/Arch-Hyprland
