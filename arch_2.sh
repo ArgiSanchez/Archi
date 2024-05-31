@@ -18,7 +18,7 @@ passwd argi
 # adjust some things
 ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 echo "arch-argi" >> /etc/hostname
-echo -e "127.0.0.1  localhost \n::1  localhost \n127.0.0.1  arh-argi.localdomain arh-argi" >> /etc/hosts
+echo -e "127.0.0.1  localhost \n::1  localhost \n127.0.0.1  arch-argi.localdomain arch-argi" >> /etc/hosts
 #hwclock —systohc
 #nano /etc/locale.gen
 #locale-gen
