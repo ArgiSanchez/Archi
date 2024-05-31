@@ -27,7 +27,7 @@ echo -e "127.0.0.1  localhost \n::1  localhost \n127.0.0.1  arh-argi.localdomain
 
 
 # install EFI boot and grub config
-grub-install —target=x86_64-efi —efi-directory=/boot/efi —bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 
