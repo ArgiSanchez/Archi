@@ -34,3 +34,6 @@ systemctl enable NetworkManager
 
 # add btrfs label 
 btrfs filesystem label / ARCH
+
+# install snapper and config snapshots
+pacman -Sy snapper
