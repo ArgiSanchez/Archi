@@ -10,5 +10,5 @@ pacman -Sy git
 git clone https://github.com/ArgiSanchez/arch_test.git
 ```
 
-4) customize scripts run.sh and arch_2.sh for yours needs,
-5) and execute -> sh run.sh
+4) customize scripts *run.sh and arch_2.sh* for yours needs,
+5) and execute -> **sh run.sh**
