@@ -6,18 +6,18 @@
 # git clone xxxxx
 # customize for you, and execute it
 
+umount -a
 # use fdisk or cfdisk /dev/xxx -> and do partitions for your disk
 mkfs.fat -F32 /dev/vda1 -I  
 mkfs.btrfs /dev/vda2 -f  
 
 # create subvolums
-umount -a
 mount /dev/vda2 /mnt
 btrfs su cr /mnt/@ 
 btrfs su cr /mnt/@home
 btrfs su cr /mnt/@cache
 btrfs su cr /mnt/@log
-btrfs su cr /mnt/@.snapshots
+btrfs su cr /mnt/@snapshots
 mkdir /mnt/home
 mkdir -p /mnt/var/cache
 mkdir /mnt/var/log
@@ -30,7 +30,7 @@ mount -o compress=zstd:1,subvol=@ /dev/vda2 /mnt
 mount -o compress=zstd:1,subvol=@home /dev/vda2 /mnt/home
 mount -o compress=zstd:1,subvol=@cache /dev/vda2 /mnt/var/cache
 mount -o compress=zstd:1,subvol=@log /dev/vda2 /mnt/var/log
-mount -o compress=zstd:1,subvol=@.snapshots /dev/vda2 /mnt/.snapshots
+mount -o compress=zstd:1,subvol=@snapshots /dev/vda2 /mnt/.snapshots
 
 # mount the efi partition
 mkdir -p /mnt/boot/efi
