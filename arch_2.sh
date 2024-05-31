@@ -12,7 +12,7 @@ useradd -mG wheel argi
 passwd argi
 
 # add new user to sudoers -> uncoment %whell ALL=(ALL:ALL) ALL
-EDITOR=nano visudo
+#EDITOR=nano visudo
 
 
 # adjust some things
