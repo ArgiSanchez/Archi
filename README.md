@@ -1,11 +1,10 @@
-# arch linux install EFI and Btrfs subvols
+# Arch linux install with EFI and Btrfs subvols
 test script for install arch from scratch
 scripg based on arch linux from scrach
 
 start iso, install git, 
-```pacman -Sy git```
+```pacman -Sy git
+   git clone https://github.com/ArgiSanchez/arch_test.git
+```
 
-clone the script
-git clone xxxxx
-
-customize for you, and execute it
+customize for you, and execute -> sh run.sh
