@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-
+# First use fdisk or cfdisk /dev/xxx -> and do partitions for your disk
 umount -a > /dev/null
-# use fdisk or cfdisk /dev/xxx -> and do partitions for your disk
+# Customize the partitions to format
 mkfs.fat -F32 /dev/vda1 -I > /dev/null
 mkfs.btrfs /dev/vda2 -f > /dev/null  
 
-# create subvolums
+# Create subvolums
 mount /dev/vda2 /mnt
 btrfs su cr /mnt/@ 
 btrfs su cr /mnt/@home
