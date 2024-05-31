@@ -3,7 +3,7 @@ test script for install arch from scratch
 scripg based on arch linux from scrach
 
 start iso, install git, 
-``pacman -Sy git``
+```pacman -Sy git```
 
 clone the script
 git clone xxxxx
