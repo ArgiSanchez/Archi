@@ -1,4 +1,4 @@
-# arch_01
+# arch linux install EFI and Btrfs subvols
 test script for install arch from scratch
 scripg based on arch linux from scrach
 
