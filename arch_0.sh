@@ -2,9 +2,9 @@
 # scripg based on arch linux from scrach
 # start iso, install git, customize for you, and execute it
 
-# cfdisk /dev/xxx 
-mkfs.fat -F 32 /dev/vda1  de 512M para /boot/efi
-mkfs.btrfs /dev/vda2   para el filesystem
+# cfdisk /dev/xxx -> partition your disk
+mkfs.fat -F 32 /dev/vda1  # 512M  /boot/efi
+mkfs.btrfs /dev/vda2   
 
 # create subvolums
 mount /dev/vda2 /mnt
