@@ -1,5 +1,5 @@
-# Arch linux install with EFI and Btrfs subvols
-script for install arch from scratch
+# Arch linux auto install with EFI and Btrfs subvols
+Script for install Arch linux from scratch in a 2 seconds
 
 1) download Arch ISO from https://archlinux.org/download/ 
 2) boot from it
