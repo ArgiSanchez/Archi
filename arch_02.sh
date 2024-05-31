@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # set de root password
+echo "set password for the root"
 passwd
 
 # install some packages more
