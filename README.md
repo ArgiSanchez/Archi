@@ -7,7 +7,7 @@ Script for install Arch linux from scratch in a 2 seconds
 
 ```
 pacman -Sy git
-git clone https://github.com/ArgiSanchez/archi.git
+git clone https://github.com/ArgiSanchez/Archi.git
 ```
 
 4) customize scripts *run.sh and arch_2.sh* for yours needs,
