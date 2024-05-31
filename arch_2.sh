@@ -4,7 +4,7 @@ echo "set password for the root"
 passwd
 
 # install some packages more
-pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant \
+pacman -Sy grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant \
 dialog os-prober mtools dosfstools base-devel linux-headers reflector cron btrfs-progs
 
 # add an user -- chain argi for the username that you wont
