@@ -17,14 +17,14 @@ btrfs su cr /mnt/@home
 btrfs su cr /mnt/@cache
 btrfs su cr /mnt/@log
 btrfs su cr /mnt/@.snapshots
-
-
-# mount the btrfs volums
-umount /mnt
 mkdir /mnt/home
 mkdir -p /mnt/var/cache
 mkdir /mnt/var/log
 mkdir /mnt/.snapshots
+
+
+# mount the btrfs volums
+umount /mnt
 mount -o compress=zstd:1,subvol=@ /dev/vda2 /mnt
 mount -o compress=zstd:1,subvol=@home /dev/vda2 /mnt/home
 mount -o compress=zstd:1,subvol=@cache /dev/vda2 /mnt/var/cache
