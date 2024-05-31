@@ -8,7 +8,7 @@
 
 # use fdisk or cfdisk /dev/xxx -> and do partitions for your disk
 mkfs.fat -F 32 /dev/vda1  # 512M  /boot/efi
-mkfs.btrfs /dev/vda2   
+mkfs.btrfs /dev/vda2 -f  
 
 # create subvolums
 mount /dev/vda2 /mnt
