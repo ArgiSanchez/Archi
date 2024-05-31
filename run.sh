@@ -39,6 +39,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash /home/arch_2.sh
 
 # end
+rm /mnt/home/arch_2.sh
 echo -e "\n---------------------------------------\n"
 echo -e " ... Remov de ISO and REBOOT your system ..."
 echo -e "\n--------------------------------------\n "
