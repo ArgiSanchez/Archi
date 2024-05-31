@@ -11,6 +11,7 @@ mkfs.fat -F32 /dev/vda1 -I
 mkfs.btrfs /dev/vda2 -f  
 
 # create subvolums
+umount -a
 mount /dev/vda2 /mnt
 btrfs su cr /mnt/@ 
 btrfs su cr /mnt/@home
