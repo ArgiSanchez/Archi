@@ -43,3 +43,6 @@ chmod +x /mnt/home/arch_2.sh
 pacstrap /mnt base linux linux-firmware vim nano
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash /home/arch_2.sh
+
+# end
+echo "reboot your system and remove the ISO"
