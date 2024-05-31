@@ -6,10 +6,10 @@
 # git clone xxxxx
 # customize for you, and execute it
 
-umount -a
+umount -a > /dev/null
 # use fdisk or cfdisk /dev/xxx -> and do partitions for your disk
-mkfs.fat -F32 /dev/vda1 -I  
-mkfs.btrfs /dev/vda2 -f  
+mkfs.fat -F32 /dev/vda1 -I > /dev/null
+mkfs.btrfs /dev/vda2 -f > /dev/null  
 
 # create subvolums
 mount /dev/vda2 /mnt
