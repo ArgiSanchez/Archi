@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # scripg based on arch linux from scrach
-# start iso, install git and do the scrip and customize for you
+# start iso, install git, customize for you, and execute it
 
 # cfdisk /dev/xxx 
 mkfs.fat -F 32 /dev/vda1  de 512M para /boot/efi
