@@ -14,7 +14,7 @@ mkfs.btrfs /dev/vda2 -f
 mount /dev/vda2 /mnt
 btrfs su cr /mnt/@ 
 btrfs su cr /mnt/@home
-brtfs su cr /mnt/@cache
+btrfs su cr /mnt/@cache
 btrfs su cr /mnt/@log
 btrfs su cr /mnt/@.snapshots
 
