@@ -6,7 +6,7 @@
 # git clone xxxxx
 # customize for you, and execute it
 
-# cfdisk /dev/xxx -> partition your disk
+# use fdisk or cfdisk /dev/xxx -> and do partitions for your disk
 mkfs.fat -F 32 /dev/vda1  # 512M  /boot/efi
 mkfs.btrfs /dev/vda2   
 
