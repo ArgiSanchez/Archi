@@ -35,44 +35,11 @@ mount -o compress=zstd:1,subvol=@snapshots /dev/vda2 /mnt/.snapshots
 mkdir -p /mnt/boot/efi
 mount /dev/vda1 /mnt/boot/efi
 
+#copy part2 of installation
+cp arch_2.sh /mnt/home/arch_2.sh
+chmod +x /mnt/home/arch_2.sh
+
 # install base and do the arch-chroot
 pacstrap /mnt base linux linux-firmware vim nano
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
-
-# set de root password
-passwd
-
-# install some packages more
-pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant \
-dialog os-prober mtools dosfstools base-devel linux-headers reflector cron btrfs-progs
-
-# add an user -- chain argi for the username that you wont
-useradd -mG wheel argi
-passwd argi
-
-# add new user to sudoers -> uncoment %whell ALL=(ALL:ALL) ALL
-EDITOR=nano visudo
-
-
-# adjust some things
-ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
-echo "arch-argi" >> /etc/hostname
-echo -e "127.0.0.1  localhost \n::1  localhost \n127.0.0.1  arh-argi.localdomain arh-argi" >> /etc/hosts
-#hwclock —systohc
-#nano /etc/locale.gen
-#locale-gen
-#nano /etc/locale.conf
-#LANG=en_US.UTF-8
-
-
-# install EFI boot and grub config
-grub-install —target=x86_64-efi —efi-directory=/boot/efi —bootloader-id=GRUB
-grub-mkconfig -o /boot/grub/grub.cfg
-systemctl enable NetworkManager
-
-
-# add btrfs label 
-btrfs filesystem label / ARCH
-
-# reboot you system
+arch-chroot /mnt /bin/bash /mnt/home/arch_2.sh
