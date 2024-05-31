@@ -17,6 +17,7 @@ btrfs su cr /mnt/@home
 btrfs su cr /mnt/@cache
 btrfs su cr /mnt/@log
 btrfs su cr /mnt/@.snapshots
+mkdir /mnt/.snapshots
 
 # mount the btrfs volums
 umount /mnt
