@@ -1,10 +1,4 @@
 #!/usr/bin/env bash
-# scripg based on arch linux from scrach
-# start iso, install git, 
-# pacman -Sy git
-# clone the script
-# git clone xxxxx
-# customize for you, and execute it
 
 umount -a > /dev/null
 # use fdisk or cfdisk /dev/xxx -> and do partitions for your disk
@@ -45,4 +39,6 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash /home/arch_2.sh
 
 # end
-echo "reboot your system and remove the ISO"
+echo -e "\n---------------------------------------\n"
+echo -e " ... Remov de ISO and REBOOT your system ..."
+echo -e "\n--------------------------------------\n "
