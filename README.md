@@ -12,3 +12,9 @@ git clone https://github.com/ArgiSanchez/arch_test.git
 
 4) customize scripts *run.sh and arch_2.sh* for yours needs,
 5) and execute -> **sh run.sh**
+
+
+## Cotinue with a desktop Hyprland
+After that you can continue with the magnific script from
+
+https://github.com/JaKooLit/Arch-Hyprland
