@@ -42,4 +42,4 @@ chmod +x /mnt/home/arch_2.sh
 # install base and do the arch-chroot
 pacstrap /mnt base linux linux-firmware vim nano
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt /bin/bash /mnt/home/arch_2.sh
+arch-chroot /mnt /bin/bash /home/arch_2.sh
