@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # scripg based on arch linux from scrach
-# start iso, install git, customize for you, and execute it
+# start iso, install git, 
+# pacman -Sy git
+# clone the script
+# git clone xxxxx
+# customize for you, and execute it
 
 # cfdisk /dev/xxx -> partition your disk
 mkfs.fat -F 32 /dev/vda1  # 512M  /boot/efi
