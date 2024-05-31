@@ -16,5 +16,6 @@ git clone https://github.com/ArgiSanchez/arch_test.git
 
 ## Cotinue with a desktop Hyprland
 After that you can continue with the magnific script from Ja.KooLit
+and in a 2 seconds more you have a definive beatiful Arch from scratch
 
 https://github.com/JaKooLit/Arch-Hyprland
