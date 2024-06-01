@@ -25,7 +25,7 @@ This script allows you to install Arch Linux from scratch in just a few seconds,
    Run the installation script with:
    ```sh run.sh```
 
-\
+\\
 
 ## Continue with a Hyprland Desktop Environment
 
