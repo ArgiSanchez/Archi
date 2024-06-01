@@ -1,45 +1,69 @@
 #!/usr/bin/env bash
-# First use fdisk or cfdisk /dev/xxx -> and do partitions for your disk
-umount -a > /dev/null
+
+set -euo pipefail
+
+# Function to print an error message and exit
+error_exit() {
+    echo "$1" >&2
+    exit 1
+}
+
+# Ensure the script is run as root
+if [[ $EUID -ne 0 ]]; then
+    error_exit "This script must be run as root"
+fi
+
+# Ensure the disk is specified as an argument
+if [[ $# -ne 1 ]]; then
+    error_exit "Usage: $0 /dev/sdX"
+fi
+
+DISK="$1"
+
+# Verify the disk exists
+if [[ ! -b $DISK ]]; then
+    error_exit "Disk $DISK does not exist"
+fi
+
+# Unmount all partitions of the specified disk
+umount -R /mnt 2>/dev/null || true
+
 # Customize the partitions to format
-mkfs.fat -F32 /dev/vda1 -I > /dev/null
-mkfs.btrfs /dev/vda2 -f > /dev/null  
+mkfs.fat -F32 "${DISK}1" -I > /dev/null
+mkfs.btrfs "${DISK}2" -f > /dev/null
 
-# Create subvolums
-mount /dev/vda2 /mnt
-btrfs su cr /mnt/@ 
-btrfs su cr /mnt/@home
-btrfs su cr /mnt/@cache
-btrfs su cr /mnt/@log
-btrfs su cr /mnt/@snapshots
+# Create subvolumes
+mount "${DISK}2" /mnt
+for subvol in @ @home @cache @log @snapshots; do
+    btrfs su cr "/mnt/$subvol"
+done
 
-# mount the btrfs volums
+# Mount the btrfs subvolumes
 umount /mnt
-mount -o compress=zstd:1,subvol=@ /dev/vda2 /mnt
-mkdir /mnt/home
-mount -o compress=zstd:1,subvol=@home /dev/vda2 /mnt/home
-mkdir -p /mnt/var/cache
-mount -o compress=zstd:1,subvol=@cache /dev/vda2 /mnt/var/cache
-mkdir /mnt/var/log
-mount -o compress=zstd:1,subvol=@log /dev/vda2 /mnt/var/log
-mkdir /mnt/.snapshots
-mount -o compress=zstd:1,subvol=@snapshots /dev/vda2 /mnt/.snapshots
+mount -o compress=zstd:1,subvol=@ "${DISK}2" /mnt
+mkdir -p /mnt/{home,var/cache,var/log,.snapshots}
+mount -o compress=zstd:1,subvol=@home "${DISK}2" /mnt/home
+mount -o compress=zstd:1,subvol=@cache "${DISK}2" /mnt/var/cache
+mount -o compress=zstd:1,subvol=@log "${DISK}2" /mnt/var/log
+mount -o compress=zstd:1,subvol=@snapshots "${DISK}2" /mnt/.snapshots
 
-# mount the efi partition
+# Mount the EFI partition
 mkdir -p /mnt/boot/efi
-mount /dev/vda1 /mnt/boot/efi
+mount "${DISK}1" /mnt/boot/efi
 
-#copy part2 of installation
+# Copy part2 of installation
 cp arch_2.sh /mnt/home/arch_2.sh
 chmod +x /mnt/home/arch_2.sh
 
-# install base and do the arch-chroot
+# Install base and do the arch-chroot
 pacstrap /mnt base linux linux-firmware vim nano
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt /bin/bash /home/arch_2.sh
+arch-chroot /mnt /home/arch_2.sh
 
-# end
+# Clean up
 rm /mnt/home/arch_2.sh
+
+# Print completion message
 echo -e "\n---------------------------------------\n"
-echo -e " ... Remov de ISO and REBOOT your system ..."
-echo -e "\n--------------------------------------\n "
+echo -e " ... Remove the ISO and REBOOT your system ..."
+echo -e "\n--------------------------------------\n"
