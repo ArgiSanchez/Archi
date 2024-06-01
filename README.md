@@ -28,7 +28,7 @@ If you're installing from a wireless connection, you must use the `iwctl` comman
 ```sh
 device list
 station wlan0 get-networks
-station wlan0 connect
+station wlan0 connect``
 
 
 6. **Execute the Script**
