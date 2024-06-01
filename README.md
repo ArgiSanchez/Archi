@@ -38,7 +38,7 @@ If you're installing from a wireless connection, you must use the `iwctl` comman
    4.3. **Create Btrfs Partition (Desired Size, e.g., 50GB)**: \
          - Type `n`, Enter, Enter, Enter, `+50G`, Enter, `t`, Enter, `20` \
    4.4. **Write Changes and Quit**: \
-         - Type `w`, Enter, `q`, Enter \
+         - Type `w`, Enter, `q`, Enter 
 
    You'll have an EFI partition (512MB) and a Btrfs partition (e.g., 50GB) for subvolumes 
 
