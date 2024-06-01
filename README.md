@@ -14,9 +14,9 @@ This script allows you to install Arch Linux from scratch in just a few seconds,
 If you're installing from a wireless connection, you must use the `iwctl` command to establish the internet connection to proceed:
  
    ```bash 
-   device list
-   station wlan0 get-networks
-   station wlan0 connect
+   iwctl station list
+   iwctl station [wlan0] get-networks
+   iwctl station [wlan0] connect [Network name]
 ```
 
 3. **Install Git and Clone the Repository**  
