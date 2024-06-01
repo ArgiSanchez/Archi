@@ -47,7 +47,7 @@ If you're installing from a wireless connection, you must use the `iwctl` comman
    ```sh run.sh sdX``` 
 
 
-Now you have a fully functional Arch command-line interface without a graphical environment. If you wish, you can proceed to install the beautiful Hyperland desktop...
+After that you have a fully functional Arch command-line interface without a graphical environment. If you wish, you can proceed to install the beautiful Hyperland desktop...
 
 ## Continue with a Hyprland Desktop Environment
 
