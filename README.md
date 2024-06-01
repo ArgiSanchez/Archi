@@ -24,11 +24,10 @@ This script allows you to install Arch Linux from scratch in just a few seconds,
 
    
 If you're installing from a wireless connection, you must use the `iwctl` command to establish the internet connection to proceed with the installation:
-
-```sh
+ 
 device list
 station wlan0 get-networks
-station wlan0 connect```
+station wlan0 connect
 
 
 6. **Execute the Script**
