@@ -1,21 +1,18 @@
-# Arch linux auto install with EFI and Btrfs subvols
-Script for install Arch linux from scratch in a 2 seconds
+# Arch Linux Auto Install with EFI and Btrfs Subvolumes
 
-1) download Arch ISO from https://archlinux.org/download/ 
-2) boot from it
-3) install git and clone the repo
+This script allows you to install Arch Linux from scratch in just a few seconds, with EFI and Btrfs subvolumes configured.
 
-```
-pacman -Sy git
-git clone https://github.com/ArgiSanchez/Archi.git
-```
+## How to Use
 
-4) customize scripts *run.sh and arch_2.sh* for yours needs,
-5) and execute -> **sh run.sh**
+1. **Download the Arch Linux ISO**  
+   Download the latest Arch Linux ISO from the official website:  
+   [Arch Linux Download](https://archlinux.org/download/)
 
+2. **Boot from the ISO**  
+   Boot your system using the downloaded Arch Linux ISO.
 
-## Cotinue with a desktop Hyprland
-After that you can continue with the magnific script from Ja.KooLit
-and in a 2 seconds more you have a definive beatiful Arch from scratch
-
-https://github.com/JaKooLit/Arch-Hyprland
+3. **Install Git and Clone the Repository**  
+   Open a terminal and run the following commands to install Git and clone this repository:
+   ```bash
+   pacman -Sy git
+   git clone https://github.com/ArgiSanchez/Archi.git
