@@ -45,7 +45,7 @@ If you're installing from a wireless connection, you must use the `iwctl` comman
 
 5. **Execute the Script**
    Run the installation script with:
-   ```sh run.sh``` 
+   ```sh run.sh sdX``` 
 
 ## Continue with a Hyprland Desktop Environment
 
