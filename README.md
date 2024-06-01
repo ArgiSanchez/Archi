@@ -22,6 +22,14 @@ This script allows you to install Arch Linux from scratch in just a few seconds,
    *-> the most important thing is to define the disk to use and set the two partitions to be used for the installation at the begin of run.sh script*
    ![imagen](https://github.com/ArgiSanchez/Archi/assets/2486668/3a17a4e5-11f2-4971-ab92-57add42feb9a)
 
+   
+If you're installing from a wireless connection, you must use the `iwctl` command to establish the internet connection to proceed with the installation:
+
+```sh
+device list
+station wlan0 get-networks
+station wlan0 connect
+
 
 6. **Execute the Script**
    Run the installation script with:
