@@ -17,7 +17,7 @@ This script allows you to install Arch Linux from scratch in just a few seconds,
    pacman -Sy git
    git clone https://github.com/ArgiSanchez/Archi.git
 
-If you're installing from a wireless connection, you must use the `iwctl` command to establish the internet connection to proceed with the installation:
+If you're installing from a wireless connection, you must use the `iwctl` command to establish the internet connection to proceed:
  
    ```bash 
    device list
