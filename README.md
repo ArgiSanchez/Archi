@@ -19,7 +19,7 @@ This script allows you to install Arch Linux from scratch in just a few seconds,
 
 4. **Customize the Scripts**
    Modify the *run.sh* and *arch_2.sh* scripts according to your needs. \
-   *-> the most important thing is to define the partitions to be used for the installation at the begin of run.sh script*
+   *-> the most important thing is to define the disk and the two partitions to be used for the installation at the begin of run.sh script*
    ![imagen](https://github.com/ArgiSanchez/Archi/assets/2486668/3a17a4e5-11f2-4971-ab92-57add42feb9a)
 
 
