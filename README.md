@@ -12,10 +12,10 @@ This script allows you to install Arch Linux from scratch in just a few seconds,
    Boot your system using the downloaded Arch Linux ISO.
 
 3. **Install Git and Clone the Repository**  
-   Open a terminal and run the following commands to install Git and clone this repository:
+   Just in the first screen terminal run the following commands to install Git and clone this repository:
    ```bash
    pacman -Sy git
-   git clone https://github.com/ArgiSanchez/Archi.git``
+   git clone https://github.com/ArgiSanchez/Archi.git
 
 4. **Customize the Scripts**
    Modify the run.sh and arch_2.sh scripts according to your needs.
