@@ -24,6 +24,8 @@ This script allows you to install Arch Linux from scratch in just a few seconds,
    Run the installation script with:
    ```sh run.sh```
 
+
 ## Continue with a Hyprland Desktop Environment
 
-After the initial setup, you can proceed with the excellent script from Ja.KooLit to get a fully functional and beautiful Arch Linux desktop with Hyprland in just 2 more seconds.
+After the initial setup, you can proceed with the excellent script from [Ja.KooLit](https://github.com/JaKooLit/Arch-Hyprland) to get a fully functional and beautiful Arch Linux desktop with Hyprland in just 2 more seconds.
+
