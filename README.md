@@ -32,15 +32,15 @@ If you're installing from a wireless connection, you must use the `iwctl` comman
 
   #### Partitioning a Disk with fdisk
 
-   4.1. **Open fdisk**: Use `fdisk /dev/sdX` in the terminal (replace `X` with your disk letter).
-   4.2. **Create EFI Partition (512MB)**:
-      - Type `n`, Enter, Enter, `+512M`, Enter, `t`, Enter, `1`.
-   4.3. **Create Btrfs Partition (Desired Size, e.g., 50GB)**:
-      - Type `n`, Enter, Enter, Enter, `+50G`, Enter, `t`, Enter, `20`.
-   4.4. **Write Changes and Quit**:
-      - Type `w`, Enter, `q`, Enter.
+   4.1. **Open fdisk**: Use `fdisk /dev/sdX` in the terminal (replace `X` with your disk letter) \
+   4.2. **Create EFI Partition (512MB)**: \
+      - Type `n`, Enter, Enter, `+512M`, Enter, `t`, Enter, `1` \
+   4.3. **Create Btrfs Partition (Desired Size, e.g., 50GB)**: \
+      - Type `n`, Enter, Enter, Enter, `+50G`, Enter, `t`, Enter, `20` \
+   4.4. **Write Changes and Quit**: \
+      - Type `w`, Enter, `q`, Enter \
 
-   You'll have an EFI partition (512MB) and a Btrfs partition (e.g., 50GB) for subvolumes.
+   You'll have an EFI partition (512MB) and a Btrfs partition (e.g., 50GB) for subvolumes \
 
 
 5. **Execute the Script**
