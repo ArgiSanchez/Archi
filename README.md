@@ -15,7 +15,8 @@ This script allows you to install Arch Linux from scratch in just a few seconds,
    Just in the first screen terminal run the following commands to install Git and clone this repository:
    ```bash
    pacman -Sy git
-   git clone https://github.com/ArgiSanchez/Archi.git
+   git clone https://github.com/ArgiSanchez/Archi.git```
+
 
 4. **Customize the Scripts**
    Modify the *run.sh* and *arch_2.sh* scripts according to your needs. \
@@ -25,10 +26,11 @@ This script allows you to install Arch Linux from scratch in just a few seconds,
    
 ( If you're installing from a wireless connection, you must use the `iwctl` command to establish the internet connection to proceed with the installation:
  
-   ``bash 
+   ```bash 
    device list
    station wlan0 get-networks
    station wlan0 connect
+```
 )
 
 6. **Execute the Script**
