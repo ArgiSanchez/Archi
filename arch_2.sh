@@ -17,12 +17,12 @@ fi
 echo "Set password for the root user:"
 passwd
 
-# Prompt for username
-read -rp "Enter the username for the new user: " USERNAME
-
 # Install required packages
 pacman -Sy --noconfirm grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant \
     dialog os-prober mtools dosfstools base-devel linux-headers reflector cron btrfs-progs git
+
+# Prompt for username
+read -rp "Enter the username for the new user: " USERNAME
 
 # Add the user
 echo "Set password for the user '$USERNAME':"
