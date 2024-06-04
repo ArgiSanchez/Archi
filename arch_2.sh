@@ -60,3 +60,6 @@ btrfs filesystem label / ARCH
 pacman -Sy --noconfirm snapper
 
 echo "Installation complete. Please review the output for any errors."
+
+# if you wont yo can install Hyperland from JaKooLit
+# git clone --depth=1 https://github.com/JaKooLit/Arch-Hyprland.git
