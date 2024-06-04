@@ -65,6 +65,7 @@ systemctl enable cups.socket
 
 # Install Snapper and configure snapshots
 pacman -Sy --noconfirm snapper
+# for graphical manangment install: btrfs-assistant
 
 echo "Installation complete. Please review the output for any errors."
 
