@@ -56,7 +56,6 @@ systemctl enable NetworkManager
 # Label the Btrfs filesystem
 btrfs filesystem label / ARCH
 
-
 # Install printing support
 pacman -Sy --noconfirm cups cups-pdf 
 systemctl enable cups.service
