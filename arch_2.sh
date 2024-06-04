@@ -56,6 +56,13 @@ systemctl enable NetworkManager
 # Label the Btrfs filesystem
 btrfs filesystem label / ARCH
 
+
+# Install printing support
+pacman -Sy --noconfirm cups cups-pdf 
+systemctl enable cups.service
+systemctl enable cups.socket
+# for graphical config install: system-config-printer
+
 # Install Snapper and configure snapshots
 pacman -Sy --noconfirm snapper
 
